@@ -1,0 +1,116 @@
+.site-header {
+  padding: 48px 0 0 0;
+  margin-bottom: 120px;
+}
+.header {
+  @include display($items: start, $justify: space-between, $direction: row);
+}
+.header__logo-wrapper {
+}
+.header__logo {
+  @include display($items: center, $justify: start, $direction: row);
+  gap: 62px;
+  margin-bottom: 48px;
+}
+
+.header__logo-img {
+  width: 199px;
+  height: 63px;
+}
+.header__logo-text-wrapper {
+  width: 227px;
+}
+.header__logo-text {
+  @include textStyle(
+    $color: #303030,
+    $text-size: 12px,
+    $weight: 400,
+    $height: 20px,
+    $spacing: 0em,
+    $align: start
+  );
+}
+
+.navbar__list {
+  @include display();
+  gap: 48px;
+}
+
+.navbar__link {
+  transition: all 0.4s linear;
+  @include textStyle(
+    $text-size: 16px,
+    $weight: 700,
+    $height: 20px,
+    $spacing: 0em,
+    $align: start
+  );
+  letter-spacing: 0.48px;
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.contact {
+  @include display();
+}
+.contact__phone {
+  margin-right: 36px;
+  @include textStyle(
+    $color: #303030,
+    $text-size: 16px,
+    $weight: 700,
+    $height: 18px,
+    $spacing: 0em,
+    $align: right
+  );
+}
+.contact__btn {
+  @include button($width: 115px);
+}
+.header__smartphone {
+  width: 50px;
+  height: 50px;
+  border-radius: 7px;
+  margin-right: 8px;
+  display: none;
+}
+.header__hamburger {
+  width: 50px;
+  height: 50px;
+  background-color: #dee6ef;
+  border-radius: 7px;
+  display: none;
+}
+
+@media (max-width: 935px) {
+  .navbar__list {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 840px) {
+  .header__hamburger,
+  .header__smartphone {
+    display: block;
+  }
+
+  .contact__phone,
+  .contact__btn,
+  .navbar {
+    display: none;
+  }
+}
+@media (max-width: 648px) {
+  .site-header {
+    padding: 48px 0 0 0;
+    margin-bottom: 0;
+  }
+  .header__logo-img {
+    width: 90px;
+    height: 30px;
+  }
+  .header__logo-text-wrapper {
+    display: none;
+  }
+}

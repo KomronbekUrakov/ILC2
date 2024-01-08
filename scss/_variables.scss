@@ -1,0 +1,40 @@
+@mixin display($items: center, $justify: space-between, $direction: row) {
+  display: flex;
+  align-items: $items;
+  justify-content: $justify;
+  flex-direction: $direction;
+}
+
+@mixin textStyle(
+  $color: #000,
+  $text-size: 16px,
+  $weight: 400,
+  $height: 20px,
+  $spacing: 0em,
+  $align: start
+) {
+  color: $color;
+  font-size: $text-size;
+  font-weight: $weight;
+  line-height: $height;
+  letter-spacing: $spacing;
+  text-align: $align;
+}
+
+@mixin button($width: 115px,) {
+  @include textStyle(
+    $color: #fff,
+    $text-size: 16px,
+    $weight: 700,
+    $height: 18px,
+    $spacing: 0em,
+    $align: center
+  );
+  width: $width;
+  padding: 16px 0;
+  border-radius: 15px;
+  background-color: #273895;
+  display: inline-block;
+}
+
+
